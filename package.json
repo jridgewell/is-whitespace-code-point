@@ -1,6 +1,6 @@
 {
   "name": "is-whitespace-code-point",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Checks if a given code point is whitespace",
   "license": "MIT",
   "keywords": [
