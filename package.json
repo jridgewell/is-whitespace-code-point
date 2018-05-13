@@ -1,0 +1,23 @@
+{
+  "name": "is-whitespace-code-point",
+  "version": "0.0.1",
+  "description": "Checks if a given code point is whitespace",
+  "license": "MIT",
+  "keywords": [
+    "whitespace",
+    "code",
+    "point"
+  ],
+  "repository": "jridgewell/is-whitespace-code-point",
+  "author": "Justin Ridgewell <justin@ridgewell.name>",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "benchmark": "^2.1.4"
+  },
+  "scripts": {
+    "test": "node ./test.js"
+  }
+}
