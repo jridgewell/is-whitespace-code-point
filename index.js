@@ -12,24 +12,37 @@ module.exports = isWhitespaceCodePoint;
  * @return {boolean}
  */
 function isWhitespaceCodePoint(code) {
-  if (code === 0x20 /* " " */) {
+  // The ASCII whitespace chars.
+  if (
+    code === 0x20 ||
+    code === 0xA0 ||
+    code === 0x09 ||
+    code === 0x0A ||
+    code === 0x0B ||
+    code === 0x0C ||
+    code === 0x0D
+  ) {
     return true;
   }
 
-  // Uncommon, but we need to check this before the general ASCII check.
-  if (code === 0xA0) {
-    return true;
-  }
-
-  // All of ASCII, except for the lower control chars, fall in this range
-  if (code > 0x0D && code < 0x1680) {
+  // All of ASCII, falls in this range
+  if (code < 0x1680) {
     return false;
   }
 
   // All the others...
-  return (code <= 0x0D && code >= 0x09) ||
-    code === 0x1680 ||
-    (code <= 0x200A  && code >= 0x2000) ||
+  return code === 0x1680 ||
+    code === 0x2000 ||
+    code === 0x2001 ||
+    code === 0x2002 ||
+    code === 0x2003 ||
+    code === 0x2004 ||
+    code === 0x2005 ||
+    code === 0x2006 ||
+    code === 0x2007 ||
+    code === 0x2008 ||
+    code === 0x2009 ||
+    code === 0x200A ||
     code === 0x2028 ||
     code === 0x2029 ||
     code === 0x202F ||
